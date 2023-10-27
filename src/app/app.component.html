@@ -1,0 +1,7 @@
+
+
+<div class="container">
+    <app-weather-section (citySelectedChange)="setCityName($event)"></app-weather-section>
+
+    <app-more-info-section [cityName] = "selectedCity"></app-more-info-section>
+</div>

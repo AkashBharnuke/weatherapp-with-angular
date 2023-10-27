@@ -1,0 +1,35 @@
+<!-- <div class="upper-section" *ngIf="weatherData; else loading"> -->
+
+    <div class="search-city">
+        <form #form="ngForm" (submit)="onSubmit()">
+            <input type="text" name="cityName" placeholder="search city weather" [(ngModel)]="cityName"/>
+
+        </form>
+
+    </div>
+
+    <div class="upper-section" >
+    
+    <img src="../assets/images/weatherappimage.png" alt="weatherimage">
+
+    <div class="weather-data" *ngIf="weatherData">
+
+        <div class="location">{{weatherData.name}}</div>
+
+        <div class="temperature">{{weatherData.main.temp - 273 | number: '1.0-0'}}°C</div>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+<!-- <ng-template #loading>
+    <div class="upper-section">
+    <img src="../../assets/images/mintemp.png" />
+    <img src="../assets/images/loading.gif" alt="loading">
+    </div>
+    </ng-template> -->
